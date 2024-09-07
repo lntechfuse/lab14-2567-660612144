@@ -1,7 +1,10 @@
-export default function Footer() {
+import { Text } from "@mantine/core";
+import { footerProps } from "@lib/types";
+
+export default function Footer({year, fullName, studentId}: footerProps) {
   return (
-    <div>
-      <p>Copyright ©</p>
-    </div>
+    <Text ta="center" my="sm" c="gray" size="sm">
+      Copyright © {year} {fullName} {studentId}
+    </Text>
   );
 }
